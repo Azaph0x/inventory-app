@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <label *ngIf="label">{{ label }} @if (requiredNote) { <span>*</span> }</label>
+  <ion-input
+  [attr.control]="control"
+  [attr.name]="name"
+  placeholder="{{ placeholder}}"
+  >
+</ion-input>
+</div>

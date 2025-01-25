@@ -1,0 +1,23 @@
+<div class="list-wrapper">
+  <ion-segment value="products">
+    <ion-segment-button value="products">
+      <ion-label>Produtos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="moviments">
+      <ion-label>Movimentações</ion-label>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <div class="items">
+    <div class="item" *ngFor="let item of [].constructor(5)">
+      <ion-skeleton-text [animated]="true" style="width: 40px; height: 40px;"></ion-skeleton-text>
+      <div class="data">
+        <ion-skeleton-text [animated]="true" style="width: 100%; height: 20px;"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" style="width: 100px; height: 20px;"></ion-skeleton-text>
+      </div>
+    </div>
+  </div>
+
+
+</div>

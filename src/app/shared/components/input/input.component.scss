@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  label {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+
+    span {
+      font-size: 12px;
+      color: red;
+    }
+  }
+  ion-input {
+    --background: #2c2c2c;
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --border-radius: 8px;
+  }
+}

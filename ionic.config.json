@@ -1,0 +1,7 @@
+{
+  "name": "bookstore-inventory-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
