@@ -52,3 +52,12 @@ ion-tab-bar {
   width: calc(100% - 32px);
   padding: 4px 0;
 }
+
+ion-button {
+  &.custom {
+    --background: #6cb53b;
+    color: #fff;
+    font-weight: 600;
+    --border-radius: 8px;
+  }
+}

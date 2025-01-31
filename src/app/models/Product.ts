@@ -5,7 +5,8 @@ export type Product = {
   description: String,
   isActivated: Boolean,
   barCode: string,
-  createdAt: Date,
+  categoryId: number,
+  createdAt: String,
 }
 
 export type ProductDTO = {
@@ -13,6 +14,6 @@ export type ProductDTO = {
   name: String,
   description: String,
   isActivated: Boolean,
+  categoryId: number,
   barCode: string,
-  createdAt: Date,
 }

@@ -14,6 +14,7 @@ export class InputComponent  implements OnInit {
   @Input() control!: FormControl;
   @Input() label!: string;
   @Input() requiredNote: boolean = false;
+  @Input() icon!: { src: boolean, value: string};
 
   constructor() { }
 

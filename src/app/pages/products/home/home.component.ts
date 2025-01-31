@@ -1,8 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { Subject, takeUntil, tap } from 'rxjs';
+import { Subject, take, takeUntil, tap } from 'rxjs';
 import { CategoryProduct } from 'src/app/models/CategoryProduct';
+import { Product } from 'src/app/models/Product';
 import { CategoryProductService } from 'src/app/services/category-product/category-product.service';
+import { ProductService } from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'products-home',
@@ -14,12 +16,15 @@ export class HomeProductsComponent implements OnInit, OnDestroy {
 
   constructor(
     private categoryProductService: CategoryProductService,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private productService: ProductService
   ) { }
 
   loading: boolean = false;
 
   categoriesProduct: CategoryProduct[] = [];
+  products: Product[] = [];
+
   subjectDestroy: Subject<any> = new Subject();
 
   ngOnInit() {
@@ -27,6 +32,14 @@ export class HomeProductsComponent implements OnInit, OnDestroy {
       takeUntil(this.subjectDestroy),
       tap((r) => {
         this.categoriesProduct = r;
+      })
+    ).subscribe()
+    this.productService.getProduct()
+    .pipe(
+      // take(0),
+      tap((r) => {
+        this.products = r;
+        this.loading = true;
       })
     ).subscribe()
   }

@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ItemProductSkeletonComponent } from './components/item-product-skeleton/item-product-skeleton.component';
 import { CreateProductComponent } from './create/create.component';
 import { ComponentsSharedModule } from 'src/app/shared/components/components.module';
+import { ItemProductComponent } from './components/item-product/item-product.component';
 
 @NgModule({
   declarations: [
     HomeProductsComponent,
     ItemProductSkeletonComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    ItemProductComponent
   ],
   imports: [
     CommonModule,

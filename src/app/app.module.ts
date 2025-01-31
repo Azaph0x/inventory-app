@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoryProductMockService } from './services/category-product/category-product-mock.service';
 import { CategoryProductService } from './services/category-product/category-product.service';
+import { ProductService } from './services/product/product.service';
+import { ProductMockService } from './services/product/product-mock.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +18,8 @@ import { CategoryProductService } from './services/category-product/category-pro
   }), AppRoutingModule],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: CategoryProductService, useClass: CategoryProductMockService}
+    { provide: CategoryProductService, useClass: CategoryProductMockService },
+    { provide: ProductService, useClass: ProductMockService}
   ],
   bootstrap: [AppComponent],
 })

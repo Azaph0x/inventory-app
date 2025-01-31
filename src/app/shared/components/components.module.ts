@@ -4,17 +4,18 @@ import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './header/header.component';
 import { InputComponent } from './input/input.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    InputComponent
+    InputComponent,
+    SelectComponent
   ],
   exports: [
     HeaderComponent,
-    InputComponent
+    InputComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,
