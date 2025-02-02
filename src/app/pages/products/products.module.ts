@@ -4,23 +4,23 @@ import { CommonModule } from '@angular/common';
 import { ProductsRoutingModule } from './products-routing.module';
 import { HomeProductsComponent } from './home/home.component';
 import { IonicModule } from '@ionic/angular';
-import { ItemProductSkeletonComponent } from './components/item-product-skeleton/item-product-skeleton.component';
 import { CreateProductComponent } from './create/create.component';
 import { ComponentsSharedModule } from 'src/app/shared/components/components.module';
-import { ItemProductComponent } from './components/item-product/item-product.component';
+import { EditProductComponent } from './edit/edit.component';
+import { ViewProductComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
     HomeProductsComponent,
-    ItemProductSkeletonComponent,
     CreateProductComponent,
-    ItemProductComponent
+    EditProductComponent,
+    ViewProductComponent
   ],
   imports: [
     CommonModule,
     IonicModule,
     ProductsRoutingModule,
     ComponentsSharedModule
-  ]
+  ],
 })
 export class ProductsModule { }

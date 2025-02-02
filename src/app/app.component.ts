@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { StorageService } from './services/storage.service';
+import { ProductService } from './services/product/product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,12 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private storageService: StorageService,
+    private productService: ProductService
+  ) {
+    storageService.init().then(() => {
+      productService.loadProducts().subscribe()
+    })
+  }
 }

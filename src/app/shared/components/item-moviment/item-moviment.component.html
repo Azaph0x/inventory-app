@@ -1,0 +1,10 @@
+<div class="moviment">
+  <ion-icon name="trending-{{ moviment.entry ? 'up': 'down' }}-outline" />
+  <div class="data">
+    <p><strong>FRIBEL Alimentos</strong></p>
+    <p>Unid: <strong>{{ moviment.value | currency: 'BRL' }}</strong> | Qtd: <strong>{{ moviment.quantity }}</strong></p>
+    <p><strong>Total da compra:</strong> {{ (moviment.value * moviment.quantity) | currency: 'BRL' }}</p>
+    <p><strong>Entrada:</strong> {{ moviment.entry ? 'Sim': 'Não'}}</p>
+    <p><strong>Validade:</strong> {{ moviment.dateValidate}}</p>
+  </div>
+</div>

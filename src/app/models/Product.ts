@@ -1,18 +1,18 @@
 export type Product = {
-  id: Number,
+  id: number,
   img?: string,
-  name: String,
-  description: String,
+  name: string,
+  description: string,
   isActivated: Boolean,
   barCode: string,
   categoryId: number,
-  createdAt: String,
+  createdAt: string,
 }
 
 export type ProductDTO = {
   img?: string,
-  name: String,
-  description: String,
+  name: string,
+  description: string,
   isActivated: Boolean,
   categoryId: number,
   barCode: string,
