@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs';
+import { Product } from 'src/app/models/Product';
+import { ProductService } from 'src/app/services/product/product.service';
 
 @Component({
   selector: 'home-list-segment',
@@ -8,8 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListSegmentComponent  implements OnInit {
 
-  constructor() { }
+  segment: string = 'products';
+  products!: Product[];
 
-  ngOnInit() {}
+  constructor(
+    private productService: ProductService
+  ) { }
+
+  ngOnInit() {
+    this.productService.getProduct()
+    .pipe(
+      tap((r) => this.products = r)
+    )
+    .subscribe()
+  }
 
 }

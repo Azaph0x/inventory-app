@@ -36,7 +36,7 @@ export class HomeProductsComponent implements OnInit, OnDestroy {
     ).subscribe()
     this.productService.getProduct()
     .pipe(
-      // take(0),
+      takeUntil(this.subjectDestroy),
       tap((r) => {
         this.products = r;
         this.loading = true;

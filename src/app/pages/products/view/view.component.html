@@ -1,0 +1,23 @@
+<main-header title="Visualização"></main-header>
+<ion-content>
+  <ng-container *ngIf="product">
+    <div class="card">
+      <ion-icon class="icon" name="cube-outline" />
+      <div class="data">
+        <ion-icon class="more" style="margin-left: auto;" name="ellipsis-vertical" />
+        <h2>{{ product.name }}</h2>
+        <p><strong>Descrição</strong> {{ product.description }}</p>
+        <p><strong>Ativo</strong> {{ product.isActivated ? 'Sim': 'Não'}}</p>
+        <p><strong>Cadastrado </strong> {{ product.createdAt! | date: 'dd/mm/yy' }}</p>
+        <p><strong>Preço Medio</strong> R$ 0,00</p>
+        <p><strong>Movimentações </strong> 0</p>
+      </div>
+    </div>
+  </ng-container>
+
+  <h3>Movimentações</h3>
+  <div class="items">
+    <item-moviment *ngFor="let item of [].constructor(5)" [moviment]="movimentMock"></item-moviment>
+    <item-moviment *ngFor="let item of [].constructor(5)" [moviment]="movimentMockLeave"></item-moviment>
+  </div>
+</ion-content>
