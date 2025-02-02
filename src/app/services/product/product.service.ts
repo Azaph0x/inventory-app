@@ -4,7 +4,11 @@ import { Product, ProductDTO } from 'src/app/models/Product';
 
 export abstract class ProductService {
 
+  public abstract loadProducts(): Observable<Product[]>;
+
   public abstract getProduct(): Observable<Product[]>;
   public abstract createProduct(product: ProductDTO): Observable<Product>;
+  public abstract getProductById(id: number): Observable<any>;
+  public abstract updateProduct(product: Product): Observable<any>;
 
 }
