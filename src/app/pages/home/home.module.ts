@@ -9,13 +9,15 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { CardComponent } from './components/card/card.component';
 import { ListSegmentComponent } from './components/list-segment/list-segment.component';
+import { ComponentsSharedModule } from 'src/app/shared/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    ComponentsSharedModule
   ],
   declarations: [
     HomePage,
